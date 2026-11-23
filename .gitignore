@@ -1,0 +1,31 @@
+target/
+*.class
+
+# Log files
+*.log
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# Backup & OS generated
+*.bak
+.DS_Store
+Thumbs.db
