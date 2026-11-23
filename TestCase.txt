@@ -1,0 +1,45 @@
+package testCases;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import busServices.TipoDePoltrona;
+
+
+import busServices.*
+;
+
+
+class TestCase {
+
+	@Test
+	void test() { //Teste o estado ocupado
+		
+		
+		Poltrona p = new Poltrona ("1A",TipoDePoltrona.PADRÃO,1.0d,3.0d,6.0d);
+		Passageiro pax = new Passageiro("Sr. Madruga","12345678");
+		
+		p.setOcupante(pax); //este mpetodo muda o estado da plotrona para ocupada
+		
+		assertNotNull (p.getOcupante()); //verifica se a polrona está efetivamente ocupada
+		assertEquals (p.getOcupante(),pax); //verifica se o ocupante é o mesmo passado como param.
+		assertEquals(p.calcularArea(),3.0d); //verifica se o calculo da Área está correto
+				
+	}
+
+	
+	@Test
+	void test01() { //Teste o estado vazio
+		
+		
+		Poltrona p = new Poltrona ("1A",TipoDePoltrona.PADRÃO,2.0d,3.0d,6.0d);
+		
+	
+		assertNull (p.getOcupante()); //verifica se a poltrona está vazia
+		assertEquals(p.calcularArea(),6.0d); //verifica se o calculo da Área está correto
+		assertEquals(p.getLargura(),2.0); //verifica se o getter produz o valor correto
+		
+				
+	}
+}
